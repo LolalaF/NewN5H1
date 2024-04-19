@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+    </head>
+    <body>
+<a-scene>
+
+    <!-- Asset Management System -->
+    <a-assets>
+    <a-assets-item id="village" src="/N5H1/scene.gltf"></a-assets-item>
+    <a-assets-item id="dinasour" src="/N5H1/giganotosaurus/scene.gltf"></a-assets-item>
+    </a-assets>
+
+    <a-entity gltf-model="#village"></a-entity>
+
+    <a-entity light="intensity:3.5" position="20 20 20"></a-entity>
+
+    <a-entity gltf-model="#dinasour" width="5" depth="10" height="5" position="-25 10 42" 
+    animation__drive="dur:7000; easing: linear; from:-25 10 42; to: -28 10 -82; loop: -1; property: position" ></a-entity>
+
+
+    <!-- Sky-->
+  
+    <a-entity position="-20 50 -90" rotation="0 180 0" scale=".03 .07 .04">
+        <a-camera position="-20 10 30"></a-camera>
+    </a-entity>
+
+
+    
+<a-box color="red" width="5" depth="10" height="5" position="-25 10 42"
+animation__drive="dur:7000; easing: linear; from:-25 10 42; to: -28 10 -82; loop: -1; property: position"
+></a-box>
+
+<a-box color="yellow" width="5" depth="10" height="5" position="-25 10 35"
+animation__drive="dur:10000; easing: linear; from:-25 10 42; to: -28 10 -82; loop: -1; property: position"
+></a-box>       
+   
+
+ 
+
+</a-scene>
+    </body>
+</html>
